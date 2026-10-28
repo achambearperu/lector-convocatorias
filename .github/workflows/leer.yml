@@ -1,0 +1,46 @@
+name: Leer convocatorias
+# Solo arranca por horario o a mano desde la pestaña Actions.
+# Nunca por pull requests ni por cambios de otras personas.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "20 11-23 * * *" # cada hora, de 6:20 a 18:20 de Lima
+    - cron: "20 0-3 * * *"   # y de 19:20 a 22:20 de Lima
+# Sin permisos por defecto; el único trabajo pide solo lo que usa.
+permissions: {}
+concurrency:
+  group: leer-convocatorias
+  cancel-in-progress: false
+jobs:
+  leer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    permissions:
+      contents: write # solo para guardar las lecturas en la rama "lecturas"
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - name: Instalar lector de PDF y OCR
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils tesseract-ocr tesseract-ocr-spa
+      - name: Bajar las lecturas anteriores
+        run: |
+          git clone -q --depth 1 --branch lecturas "https://github.com/${GITHUB_REPOSITORY}.git" datos || mkdir -p datos
+          rm -rf datos/.git
+      - name: Leer avisos de gob.pe
+        run: node lector/leer.mjs
+      - name: Guardar las lecturas
+        if: always() && hashFiles('datos/indice.json') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd datos
+          git init -q -b lecturas
+          git add -A
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -q -m "Lecturas $(date -u +%Y-%m-%dT%H:%MZ)"
+          # La rama se reemplaza en cada vuelta (sin historial) para que el repo no crezca.
+          auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c http.extraheader="AUTHORIZATION: basic $auth" push -q -f "https://github.com/${GITHUB_REPOSITORY}.git" lecturas
