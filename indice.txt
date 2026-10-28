@@ -1,0 +1,10 @@
+robots.txt 200 text/plain 525
+instituciones.html 404 text/html 34833
+instituciones-p2.html 404 text/html 34833
+instituciones.json 404 text/html 34833
+estado.html 200 text/html; charset=utf-8 188924
+ugelcusco-colecciones.html 200 text/html; charset=utf-8 13041
+ugelcusco-informes.html 200 text/html; charset=utf-8 186423
+regioncusco-colecciones.html 200 text/html; charset=utf-8 13043
+busq-instituciones.json 200 application/json; charset=utf-8 27419
+busq-colecciones.json 504 text/html 36136
