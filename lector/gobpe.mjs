@@ -24,7 +24,7 @@ const esperar = (ms) => new Promise((r) => setTimeout(r, ms));
 let ultimaVisita = 0;
 
 // Fallas sueltas del servidor (502, 503, sin conexión) en una página:
-// se salta esa página. Si se repiten, gob.pe está con problemas y el bot
+// se salta esa página. Si se repiten seguidas, gob.pe está con problemas y el bot
 // se detiene. Un 403 o 429 (nos están frenando) detiene el bot al tiro.
 const MAX_FALLAS = 3;
 let fallas = 0;
@@ -52,6 +52,7 @@ async function visitar(url, tipo = "texto") {
   }
   if (r.status >= 500) return fallaSuelta(url, `error ${r.status} del servidor`);
   if (!r.ok) return null; // 404 u otro: se salta solo esa página
+  fallas = 0; // solo detienen las fallas seguidas (en una vuelta larga, una suelta no importa)
   return tipo === "pdf" ? Buffer.from(await r.arrayBuffer()) : r.text();
 }
 
@@ -252,4 +253,53 @@ function leerConOcr(archivo, carpeta) {
   } catch {
     return ""; // sin tesseract o con error: se queda como escaneado
   }
+}
+
+// ─── 4. Directorio de instituciones ───────────────────────────
+// Cada entidad de gob.pe tiene /institucion/<slug>/informes-publicaciones con
+// sus últimas publicaciones (página 1, sin "sheet=", que robots.txt prohíbe).
+// El directorio se arma con la página /estado (entidades nacionales) y con el
+// buscador de instituciones (municipalidades, UGEL, hospitales, etc.).
+const SLUG = /^[a-z0-9][a-z0-9-]{1,80}$/;
+const textoPlano = (html) => html.replace(/<[^>]+>/g, " ").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/\s+/g, " ").trim();
+
+export async function leerDirectorioEstado() {
+  const html = await visitar(`${BASE}/estado`);
+  if (!html) return [];
+  const vistas = new Map();
+  for (const [, slug, nombre] of html.matchAll(/data-origin="estado-[^"]*"\s+href="\/([a-z0-9-]+)">([^<]{2,300})</g)) {
+    if (SLUG.test(slug)) vistas.set(slug, textoPlano(nombre));
+  }
+  return [...vistas].map(([slug, nombre]) => ({ slug, nombre }));
+}
+
+export async function buscarInstituciones(termino) {
+  const texto = await visitar(`${BASE}/busquedas.json?term=${encodeURIComponent(termino).replace(/%20/g, "+")}&contenido[]=instituciones`);
+  if (!texto) return [];
+  let resultados = [];
+  try { resultados = JSON.parse(texto)?.data?.attributes?.results ?? []; } catch { return []; }
+  return (Array.isArray(resultados) ? resultados : [])
+    .filter((r) => r && r.searchable_type === "Institution")
+    .map((r) => ({ slug: String(r.action_url ?? "").replace(/^\//, ""), nombre: textoPlano(String(r.name_with_parent ?? r.url ?? "")) }))
+    .filter((i) => SLUG.test(i.slug));
+}
+
+const DIAS_RECIENTE = 45;
+// Últimas publicaciones de una entidad → { nombre, avisos: [{ id, titulo, url, entidadSigla, entidad }] }
+export async function leerInstitucion(slug) {
+  const html = await visitar(`${BASE}/institucion/${slug}/informes-publicaciones`);
+  if (!html) return null;
+  const nombre = html.match(/<title>\s*Informes y publicaciones - (.+?) - Plataforma/)?.[1]?.trim() ?? slug;
+  const avisos = new Map();
+  const patron = new RegExp(`href="(/institucion/${slug}/informes-publicaciones/(\\d+)-[^"]*)"[^>]*>([^<]{3,400})</a>[\\s\\S]{0,1500}?<time[^>]*datetime="(\\d{4}-\\d{2}-\\d{2})`, "g");
+  for (const [, enlace, id, crudo, fecha] of html.matchAll(patron)) {
+    const titulo = textoPlano(crudo);
+    const motivo = motivoAviso(titulo);
+    const viejo = (Date.now() - Date.parse(fecha)) / 86400000 > DIAS_RECIENTE;
+    registroBuscador.push(`institución ${slug} | ${(viejo && motivo === "TOMADO" ? "antiguo (ya cerró)" : motivo).padEnd(28)} | ${titulo}`);
+    if (motivo === "TOMADO" && !viejo && !avisos.has(id)) {
+      avisos.set(id, { id, titulo, url: BASE + enlace, entidadSigla: slug.toUpperCase(), entidad: nombre });
+    }
+  }
+  return { nombre, avisos: [...avisos.values()] };
 }
