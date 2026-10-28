@@ -1,0 +1,38 @@
+name: Prueba de fuentes
+# Prueba a mano (Actions → Prueba de fuentes → Run workflow): baja unas
+# páginas públicas de gob.pe y las deja en la rama "pruebas" para revisarlas.
+on:
+  workflow_dispatch:
+permissions: {}
+jobs:
+  probar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write # solo para guardar los resultados en la rama "pruebas"
+    steps:
+      - name: Bajar páginas de prueba
+        run: |
+          mkdir -p pruebas && cd pruebas
+          UA="AChambearPeruBot/0.1 (+https://achambearperu.com; achambearperu@gmail.com)"
+          bajar() { curl -sS -L -m 40 -A "$UA" -o "$1" -w "$1 %{http_code} %{content_type} %{size_download}\n" "$2" >> indice.txt || echo "$1 fallo" >> indice.txt; sleep 4; }
+          bajar robots.txt "https://www.gob.pe/robots.txt"
+          bajar instituciones.html "https://www.gob.pe/instituciones"
+          bajar instituciones-p2.html "https://www.gob.pe/instituciones?page=2"
+          bajar instituciones.json "https://www.gob.pe/instituciones.json"
+          bajar estado.html "https://www.gob.pe/estado"
+          bajar ugelcusco-colecciones.html "https://www.gob.pe/institucion/ugelcusco/colecciones"
+          bajar ugelcusco-informes.html "https://www.gob.pe/institucion/ugelcusco/informes-publicaciones"
+          bajar regioncusco-colecciones.html "https://www.gob.pe/institucion/regioncusco/colecciones"
+          bajar busq-instituciones.json "https://www.gob.pe/busquedas.json?term=ugel&contenido[]=instituciones"
+          bajar busq-colecciones.json "https://www.gob.pe/busquedas.json?term=convocatorias+cas+2026&contenido[]=colecciones"
+      - name: Guardar en la rama pruebas
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd pruebas
+          git init -q -b pruebas
+          git add -A
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -q -m "Prueba $(date -u +%Y-%m-%dT%H:%MZ)"
+          auth=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c http.extraheader="AUTHORIZATION: basic $auth" push -q -f "https://github.com/${GITHUB_REPOSITORY}.git" pruebas
