@@ -28,6 +28,19 @@ const GUARDAR_DIAS = 30; // las lecturas se borran a los 30 días (los avisos ya
 const RECORDAR_DIAS = 120; // y el id se recuerda 120 días para no volver a leerlo
 const MAX_INTENTOS = 3; // un PDF que no baja en 3 vueltas se guarda sin texto
 
+// Avisos que ya cerraron: se guarda la página pero no se bajan sus PDF
+// (ahorra tiempo y visitas a gob.pe). Cerrado = ya publicó resultados
+// finales, o se publicó hace más de 40 días.
+const DIAS_CERRADO = 40;
+const MESES = { enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6, julio: 7, agosto: 8, setiembre: 9, septiembre: 9, octubre: 10, noviembre: 11, diciembre: 12 };
+const RESULTADO_FINAL = /resultados?\s+finale?s?\b(?!\s+(?:de\s+(?:la\s+)?)?evaluaci[oó]n)|cuadro\s+de\s+m[eé]ritos\s+final|\bganador(?:es|as)?\b/i;
+function yaCerro(pagina) {
+  if (pagina.documentos.some((d) => RESULTADO_FINAL.test(d.label)) || RESULTADO_FINAL.test(pagina.textoPagina)) return true;
+  const m = pagina.textoPagina.slice(0, 1500).match(/\b(\d{1,2}) de (\p{L}+) de (20\d{2})\b/u);
+  const mes = m && MESES[m[2].toLowerCase()];
+  return Boolean(mes) && (Date.now() - Date.UTC(Number(m[3]), mes - 1, Number(m[1]))) / 86400000 > DIAS_CERRADO;
+}
+
 const INICIO = Date.now();
 const ahora = new Date().toISOString();
 const diasDesde = (fecha) => (Date.now() - Date.parse(fecha)) / 86400000;
@@ -69,9 +82,10 @@ try {
     }
     const pagina = await leerAviso(aviso);
     if (!pagina) continue; // se reintenta en la próxima vuelta
-    const leido = pagina.bases ? await leerPdf(pagina.bases, ocrUsados < MAX_OCR) : null;
+    const cerrado = yaCerro(pagina);
+    const leido = pagina.bases && !cerrado ? await leerPdf(pagina.bases, ocrUsados < MAX_OCR) : null;
     if (leido?.pendienteOcr) continue; // escaneado sin cupo de OCR: va en la próxima vuelta
-    if (pagina.bases && !leido) {
+    if (pagina.bases && !cerrado && !leido) {
       estado.intentos[aviso.id] = (estado.intentos[aviso.id] ?? 0) + 1;
       if (estado.intentos[aviso.id] < MAX_INTENTOS) continue;
     }
@@ -90,6 +104,7 @@ try {
       texto: leido?.texto ?? null,
       layout: leido?.layout ?? null,
       ocr: Boolean(leido?.ocr),
+      cerrado,
     };
     writeFileSync(join(DATOS, "lecturas", `${aviso.id}.json`), JSON.stringify(lectura));
     indice.lecturas = indice.lecturas.filter((l) => l.id !== aviso.id);
@@ -97,7 +112,7 @@ try {
     estado.leidos[aviso.id] = lectura.leido_en;
     delete estado.intentos[aviso.id];
     leidos += 1;
-    console.log(`· ${aviso.id} ${lectura.texto ? (lectura.ocr ? "leído con OCR" : "leído") : "sin texto"} · ${aviso.entidadSigla} · ${aviso.titulo.slice(0, 70)}`);
+    console.log(`· ${aviso.id} ${cerrado ? "ya cerró (sin bajar PDF)" : lectura.texto ? (lectura.ocr ? "leído con OCR" : "leído") : "sin texto"} · ${aviso.entidadSigla} · ${aviso.titulo.slice(0, 70)}`);
   }
 } catch (e) {
   detenido = e instanceof Detenido ? e.message : `error inesperado: ${e.stack ?? e.message}`;
