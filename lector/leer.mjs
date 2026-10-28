@@ -16,7 +16,7 @@
 
 import { mkdirSync, readFileSync, writeFileSync, existsSync, rmSync } from "node:fs";
 import { join } from "node:path";
-import { leerBuscador, leerAviso, leerPdf, Detenido, paginasSaltadas, coleccionesVistas, leerDirectorioEstado, buscarInstituciones, leerInstitucion } from "./gobpe.mjs";
+import { leerBuscador, leerAviso, leerPdf, Detenido, paginasSaltadas, coleccionesVistas, leerDirectorioEstado, buscarInstituciones, leerInstitucion, elegirCronograma } from "./gobpe.mjs";
 
 const DATOS = process.env.DATOS_DIR ?? "datos";
 const MAX_AVISOS = Number(process.env.LECTOR_MAX_AVISOS ?? 150);
@@ -38,6 +38,9 @@ const TERMINOS_INSTITUCIONES = [
 ];
 const GUARDAR_DIAS = 30; // las lecturas se borran a los 30 días (los avisos ya cerraron)
 const RECORDAR_DIAS = 120; // y el id se recuerda 120 días para no volver a leerlo
+// Las bases traen cronograma si después de "cronograma" aparece una fecha.
+const tieneCronograma = (t) => /cronograma[\s\S]{0,3000}?(?:\d{1,2}[\/.-]\d{1,2}[\/.-]20\d{2}|\d{1,2}\s+de\s+(?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|setiembre|septiembre|octubre|noviembre|diciembre))/i.test(t ?? "");
+const MAX_COMPLETAR = Number(process.env.LECTOR_MAX_CRONOGRAMAS ?? 25); // cronogramas aparte por vuelta, de lecturas ya guardadas
 const MAX_INTENTOS = 3; // un PDF que no baja en 3 vueltas se guarda sin texto
 
 // Avisos que ya cerraron: se guarda la página pero no se bajan sus PDF
@@ -60,6 +63,7 @@ const leerJson = (archivo, siNo) => (existsSync(archivo) ? JSON.parse(readFileSy
 
 mkdirSync(join(DATOS, "lecturas"), { recursive: true });
 const estado = leerJson(join(DATOS, "estado.json"), { version: 1, leidos: {}, intentos: {}, colecciones: [] });
+estado.cronograma_revisado ??= {}; // id → cuándo se buscó su cronograma aparte
 estado.instituciones ??= {}; // slug → { nombre, encontrada_en, revisada_en, ultimos_tomados }
 const anotarInstitucion = (slug, nombre) => {
   if (!estado.instituciones[slug]) estado.instituciones[slug] = { nombre, encontrada_en: ahora, revisada_en: null };
@@ -67,6 +71,7 @@ const anotarInstitucion = (slug, nombre) => {
 const indice = leerJson(join(DATOS, "indice.json"), { version: 1, lecturas: [] });
 
 let leidos = 0;
+let completados = 0;
 let ocrUsados = 0;
 let quedan = 0;
 let detenido = null;
@@ -146,6 +151,16 @@ try {
       if (estado.intentos[aviso.id] < MAX_INTENTOS) continue;
     }
     if (leido?.ocr) ocrUsados += 1;
+    // Cronograma en otro PDF (JNJ "Proceso CAS N° 026", UGEL Cusco "…cronograma"):
+    // se lee solo si las bases no traen fechas de cronograma.
+    let extra = null;
+    if (!cerrado && pagina.cronograma && !tieneCronograma(leido?.texto) && !/fecha\s+de\s+postulaci[oó]n/i.test(pagina.textoPagina)) {
+      const otro = await leerPdf(pagina.cronograma, ocrUsados < MAX_OCR);
+      if (otro?.texto) {
+        if (otro.ocr) ocrUsados += 1;
+        extra = { url: pagina.cronograma, texto: otro.texto, layout: otro.layout ?? null, ocr: Boolean(otro.ocr) };
+      }
+    }
     const lectura = {
       version: 1,
       id: aviso.id,
@@ -161,6 +176,7 @@ try {
       layout: leido?.layout ?? null,
       ocr: Boolean(leido?.ocr),
       cerrado,
+      ...(extra ? { extra } : {}),
     };
     writeFileSync(join(DATOS, "lecturas", `${aviso.id}.json`), JSON.stringify(lectura));
     indice.lecturas = indice.lecturas.filter((l) => l.id !== aviso.id);
@@ -169,6 +185,30 @@ try {
     delete estado.intentos[aviso.id];
     leidos += 1;
     console.log(`· ${aviso.id} ${cerrado ? "ya cerró (sin bajar PDF)" : lectura.texto ? (lectura.ocr ? "leído con OCR" : "leído") : "sin texto"} · ${aviso.entidadSigla} · ${aviso.titulo.slice(0, 70)}`);
+  }
+
+  // Lecturas ya guardadas, abiertas y sin cronograma en las bases: se baja una
+  // sola vez el PDF del cronograma (si el aviso tiene uno aparte).
+  for (const { id } of [...indice.lecturas].sort((a, b) => Number(b.id) - Number(a.id))) {
+    if (completados >= MAX_COMPLETAR || Date.now() - INICIO > TIEMPO_MAX_MS) break;
+    if (estado.cronograma_revisado[id]) continue;
+    const ruta = join(DATOS, "lecturas", `${id}.json`);
+    if (!existsSync(ruta)) continue;
+    const l = JSON.parse(readFileSync(ruta, "utf8"));
+    // (Indecopi y otros ponen la fecha de postulación en la misma página del aviso.)
+    const url = l.cerrado || yaCerro({ documentos: l.documentos ?? [], textoPagina: l.textoPagina ?? "" }) || l.extra || !l.texto || tieneCronograma(l.texto) || /fecha\s+de\s+postulaci[oó]n/i.test(l.textoPagina ?? "") ? null
+      : elegirCronograma((l.documentos ?? []).map((d) => d.url).filter((u) => u !== l.bases));
+    if (!url) { estado.cronograma_revisado[id] = ahora; continue; }
+    const otro = await leerPdf(url, ocrUsados < MAX_OCR);
+    if (!otro || otro.pendienteOcr) continue; // se intenta en la próxima vuelta
+    estado.cronograma_revisado[id] = ahora;
+    if (otro.ocr) ocrUsados += 1;
+    if (otro.texto) {
+      l.extra = { url, texto: otro.texto, layout: otro.layout ?? null, ocr: Boolean(otro.ocr) };
+      writeFileSync(ruta, JSON.stringify(l));
+    }
+    completados += 1;
+    console.log(`· ${id} cronograma aparte ${otro.texto ? "leído" : "sin texto"} · ${l.entidadSigla}`);
   }
 } catch (e) {
   detenido = e instanceof Detenido ? e.message : `error inesperado: ${e.stack ?? e.message}`;
@@ -181,13 +221,14 @@ for (const l of indice.lecturas.filter((l) => diasDesde(l.leido_en) > GUARDAR_DI
 }
 indice.lecturas = indice.lecturas.filter((l) => diasDesde(l.leido_en) <= GUARDAR_DIAS).sort((a, b) => Number(b.id) - Number(a.id));
 for (const [id, fecha] of Object.entries(estado.leidos)) if (diasDesde(fecha) > RECORDAR_DIAS) delete estado.leidos[id];
+for (const id of Object.keys(estado.cronograma_revisado)) if (!indice.lecturas.some((l) => String(l.id) === id)) delete estado.cronograma_revisado[id];
 indice.actualizado = new Date().toISOString();
 
 writeFileSync(join(DATOS, "indice.json"), JSON.stringify(indice, null, 1));
 writeFileSync(join(DATOS, "estado.json"), JSON.stringify(estado, null, 1));
 
 const resumen = [
-  `Vuelta ${indice.actualizado.slice(0, 16).replace("T", " ")} UTC · leídos: ${leidos} · con OCR: ${ocrUsados}` + (quedan ? ` · quedan ${quedan} para la próxima` : ""),
+  `Vuelta ${indice.actualizado.slice(0, 16).replace("T", " ")} UTC · leídos: ${leidos} · con OCR: ${ocrUsados} · cronogramas aparte: ${completados}` + (quedan ? ` · quedan ${quedan} para la próxima` : ""),
   `Lecturas guardadas: ${indice.lecturas.length} · colecciones conocidas: ${estado.colecciones.length} · entidades conocidas: ${Object.keys(estado.instituciones).length}`,
   detenido ? `El lector se detuvo: ${detenido}` : "",
   paginasSaltadas.length ? `Páginas saltadas:\n${paginasSaltadas.map((p) => `- ${p}`).join("\n")}` : "",

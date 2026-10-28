@@ -189,9 +189,19 @@ export async function leerBuscador(maxCompendios = 12, extras = []) {
 
 // ─── 2. Página del aviso: sus PDF y la fecha de postulación ────
 // Se compara palabra por palabra del nombre del archivo ("analista" no es "lista").
-const PDF_DESCARTAR = / (cronograma|resultados?|lista|inscritos|comunicados?|acta|fe de erratas|declaracion(es)?|instructivo|anexos?|formatos?|ganador(es)?|aptos?|horarios?|entrevistas?|preliminar|final) /i;
-const PDF_PREFERIR = / (bases|perfil|informacion general|tdr|terminos|convocatoria|requerimiento) /i;
-const palabrasDe = (url) => ` ${url.split("/").pop().replace(/\.pdf$/i, "").replace(/[-_.\s]+/g, " ")} `;
+const PDF_DESCARTAR = / (cronograma|resultados?|lista|inscritos|comunicados?|acta|fe de erratas|declaracion(es)?|instructivo|anexos?|formatos?|ganador(es)?|aptos?|horarios?|entrevistas?|preliminar|final|evaluacion|resolucion|memorando|oficio|rvm|desierta|cancelacion) /i;
+const PDF_PREFERIR = / (bases?|perfil|informacion general|tdr|terminos|convocatoria|requerimiento) /i;
+// Estos nunca son las bases, aunque digan "bases" ("Fe de erratas de las bases").
+const NUNCA_BASES = / (fe de erratas|resultados?|comunicados?|acta|aptos?|ganador(es)?|evaluacion|desierta|cancelacion|final|cuadro|meritos|preliminar) /i;
+const dicenBases = (u) => / (bases?|tdr|terminos|informacion general) /i.test(palabrasDe(u)) && !NUNCA_BASES.test(palabrasDe(u));
+// Segundo PDF, para cuando el cronograma no viene en las bases.
+const puntajeCronograma = (u) => {
+  const p = palabrasDe(u);
+  if (/ (resultados?|aptos?|ganador(es)?|acta|desierta|cancelacion|entrevistas?|preliminar|final|evaluacion) /i.test(p)) return 0;
+  return / cronograma /i.test(p) ? (/ (modificacion|reprogramacion|actualizado) /i.test(p) ? 4 : 3)
+    : / (proceso|aviso) /i.test(p) ? 1 : 0;
+};
+const palabrasDe = (url) => ` ${url.split("/").pop().replace(/\.pdf$/i, "").replace(/%[0-9a-f]{2}/gi, " ").replace(/[-_.\s]+/g, " ")} `;
 
 export async function leerAviso(aviso) {
   const html = await visitar(aviso.url);
@@ -206,8 +216,17 @@ export async function leerAviso(aviso) {
     url,
   }));
   const candidatos = propios.filter((u) => PDF_PREFERIR.test(palabrasDe(u)) || !PDF_DESCARTAR.test(palabrasDe(u)));
-  const bases = candidatos.find((u) => PDF_PREFERIR.test(palabrasDe(u))) ?? candidatos[0] ?? null;
-  return { textoPagina, documentos, bases };
+  // Primero el que dice "bases" ("Resolución y bases…", "Base administrativa…").
+  const bases = propios.find(dicenBases)
+    ?? candidatos.find((u) => PDF_PREFERIR.test(palabrasDe(u))) ?? candidatos[0]
+    // Solo una resolución: suele traer las bases como anexo.
+    ?? propios.find((u) => !NUNCA_BASES.test(palabrasDe(u))) ?? null;
+  const cronograma = elegirCronograma(propios.filter((u) => u !== bases));
+  return { textoPagina, documentos, bases, cronograma };
+}
+
+export function elegirCronograma(urls) {
+  return urls.filter((u) => puntajeCronograma(u) > 0).sort((a, b) => puntajeCronograma(b) - puntajeCronograma(a))[0] ?? null;
 }
 
 // ─── 3. Bases en PDF → texto ──────────────────────────────────
