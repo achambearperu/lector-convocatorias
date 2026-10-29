@@ -1,0 +1,1520 @@
+{
+ "version": 1,
+ "actualizado": "2026-11-27T23:30:44.997Z",
+ "lista_leida": true,
+ "captcha": null,
+ "convocatorias": [
+  {
+   "id": "2177",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "DISTRITO FISCAL DE HUANCAVELICA",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 201 - 2026",
+   "descripcion": "CONTRATACION ADMINISTRATIVA DE SERVICIOS DE UN (01) PUESTO PARA EL DF HUANCAVELICA",
+   "publicacion": "2026-11-27",
+   "inicio": "2026-12-15 08:00",
+   "fin": "2026-12-15 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-27",
+     "tipo": "Comunicado",
+     "titulo": "ANEXOS DEL 1 AL 6",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31519"
+    },
+    {
+     "fecha": "2026-11-27",
+     "tipo": "Comunicado",
+     "titulo": "PERFIL DE PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31518"
+    },
+    {
+     "fecha": "2026-11-27",
+     "tipo": "Comunicado",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31516"
+    },
+    {
+     "fecha": "2026-11-27",
+     "tipo": "Comunicado",
+     "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31515"
+    },
+    {
+     "fecha": "2026-11-27",
+     "tipo": "Comunicado",
+     "titulo": "BASES DEL PROCESO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31514"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31515",
+    "archivo": "pdf/2177.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS"
+   },
+   "revisado_en": "2026-11-27T21:30:23.433Z"
+  },
+  {
+   "id": "2129",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "DISTRITO FISCAL DE APURIMAC",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 165 - 2026",
+   "descripcion": "CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE DOS (02) PERSONAS PARA EL DISTRITO FISCAL DE APURÍMAC-SUPLENCIA",
+   "publicacion": "2026-11-25",
+   "inicio": "2026-12-11 00:00",
+   "fin": "2026-12-11 00:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "AFF-01",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31480"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "AFF-02",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31479"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXOS DEL 1 AL 6",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31478"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31477"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31476"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31471"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31476",
+    "archivo": "pdf/2129.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS"
+   },
+   "revisado_en": "2026-11-26T15:24:38.253Z"
+  },
+  {
+   "id": "2163",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "DISTRITO FISCAL DE LA SELVA CENTRAL",
+   "regimen": "DL.728 (Suplencia)",
+   "codigo": "CONCURSO PÚBLICO DE MÉRITOS 728 N° 63 - 2026",
+   "descripcion": "CPMS N° 063-2026 D.F. SELVA CENTRAL",
+   "publicacion": "2026-11-25",
+   "inicio": "2026-12-11 08:00",
+   "fin": "2026-12-11 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Comunicado",
+     "titulo": "CUADRO DE DISTRIBUCION",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31475"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31474"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Comunicado",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31473"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFIL",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31472"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31468"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31475",
+    "archivo": "pdf/2163.pdf",
+    "titulo": "CUADRO DE DISTRIBUCION"
+   },
+   "revisado_en": "2026-11-26T15:25:19.836Z"
+  },
+  {
+   "id": "2170",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "DISTRITO FISCAL DE MADRE DE DIOS",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 197 - 2026",
+   "descripcion": "CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE SEIS (06) PERSONAS PARA EL DISTRITO FISCAL DE MADRE DE DIOS",
+   "publicacion": "2026-11-25",
+   "inicio": "2026-12-11 08:00",
+   "fin": "2026-12-11 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXOS DEL 1 AL 6",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31445"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "BASES DEL CONCURSO CAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31443"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31441"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31440"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFIL DEL PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31439"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31441",
+    "archivo": "pdf/2170.pdf",
+    "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS"
+   },
+   "revisado_en": "2026-11-25T23:16:40.697Z"
+  },
+  {
+   "id": "2175",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "DISTRITO FISCAL DE LA SELVA CENTRAL",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 200 - 2026",
+   "descripcion": "CONTRATACION ADMINISTRATIVA DE SERVICIOS DE SIETE(07) PERSONAS PARA EL DISTRITO FISCAL DE SELVA CENTRAL",
+   "publicacion": "2026-11-25",
+   "inicio": "2026-12-11 08:00",
+   "fin": "2026-12-11 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Comunicado",
+     "titulo": "CUADRO DE DISTRIBUCION",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31465"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXOS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31444"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Comunicado",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31442"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31437"
+    },
+    {
+     "fecha": "2026-11-25",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFILES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31436"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31465",
+    "archivo": "pdf/2175.pdf",
+    "titulo": "CUADRO DE DISTRIBUCION"
+   },
+   "revisado_en": "2026-11-26T15:26:10.732Z"
+  },
+  {
+   "id": "2174",
+   "unidad": "INSTITUTO DE MEDICINA LEGAL Y CIENCIAS FORENSES",
+   "distrito": "DIVISION MEDICO LEGAL COBERTURA NACIONAL",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 199 - 2026",
+   "descripcion": "CONVOVATORIA PARA LA CONTRATACION ADMINISTRATIVA DE SERVICIOS DE SEIS (06) PERSONAS PARA EL INSTITUTO DE MEDICINALEGAL Y CIENCIAS FORENSES",
+   "publicacion": "2026-11-24",
+   "inicio": "2026-12-10 08:00",
+   "fin": "2026-12-10 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-24",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXO 01 AL 06- DECLARACION JURADA DEL POSTULANTE",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31410"
+    },
+    {
+     "fecha": "2026-11-24",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "PERFIL DE PUESTOS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31400"
+    },
+    {
+     "fecha": "2026-11-24",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZA",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31399"
+    },
+    {
+     "fecha": "2026-11-24",
+     "tipo": "Comunicado",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31398"
+    },
+    {
+     "fecha": "2026-11-24",
+     "tipo": "Comunicado",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31397"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31399",
+    "archivo": "pdf/2174.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZA"
+   },
+   "revisado_en": "2026-11-24T23:30:23.255Z"
+  },
+  {
+   "id": "2172",
+   "unidad": "INSTITUTO DE MEDICINA LEGAL Y CIENCIAS FORENSES",
+   "distrito": "DIVISION MEDICO LEGAL COBERTURA NACIONAL",
+   "regimen": "DL.728 (Suplencia)",
+   "codigo": "CONCURSO PÚBLICO DE MÉRITOS 728 N° 65 - 2026",
+   "descripcion": "CONVOVATORIA PARA LA CONTRATACION DE CUATRO (04) PLAZAS PARA LA UNIDAD EJECUTORA 010 DEL INSTITUTO DE MEDICINA LEGAL Y CIENCIAS FORENSES DEL D. LEG. N.° 728 Y D. LEG. N.° 276",
+   "publicacion": "2026-11-23",
+   "inicio": "2026-12-04 08:00",
+   "fin": "2026-12-04 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-23",
+     "tipo": "Comunicado",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31357"
+    },
+    {
+     "fecha": "2026-11-23",
+     "tipo": "Comunicado",
+     "titulo": "CUADRO DE DISTRIBUCIÓN",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31356"
+    },
+    {
+     "fecha": "2026-11-23",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFIL DE PUESTOS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31355"
+    },
+    {
+     "fecha": "2026-11-23",
+     "tipo": "Comunicado",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31354"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31356",
+    "archivo": "pdf/2172.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN"
+   },
+   "revisado_en": "2026-11-24T02:57:09.873Z"
+  },
+  {
+   "id": "2158",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "DISTRITO FISCAL DE MOQUEGUA",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 188 - 2026",
+   "descripcion": "CONTRATACION ADMINISTRATIVA DE SERVICIOS DE CUATRO(04) PERSONAS PARA EL DISTRITO FISCAL DE MOQUEGUA",
+   "publicacion": "2026-11-20",
+   "inicio": "2026-12-04 08:00",
+   "fin": "2026-12-04 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-20",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXOS DEL 01 AL 06",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31313"
+    },
+    {
+     "fecha": "2026-11-20",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31311"
+    },
+    {
+     "fecha": "2026-11-20",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFILES DE PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31310"
+    },
+    {
+     "fecha": "2026-11-20",
+     "tipo": "Comunicado",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31309"
+    },
+    {
+     "fecha": "2026-11-20",
+     "tipo": "Comunicado",
+     "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31308"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31308",
+    "archivo": "pdf/2158.pdf",
+    "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS"
+   },
+   "revisado_en": "2026-11-20T23:30:24.144Z"
+  },
+  {
+   "id": "2171",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "DISTRITO FISCAL DE HUANCAVELICA",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 196 - 2026",
+   "descripcion": "CONTRATACION ADMINISTRATIVA DE SERVICIOS DE UN (01) PUESTO PARA EL DF HUANCAVELICA",
+   "publicacion": "2026-11-20",
+   "inicio": "2026-12-04 08:00",
+   "fin": "2026-12-04 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-20",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXOS DEL 1 AL 6",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31305"
+    },
+    {
+     "fecha": "2026-11-20",
+     "tipo": "Comunicado",
+     "titulo": "PERFIL DE PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31304"
+    },
+    {
+     "fecha": "2026-11-20",
+     "tipo": "Comunicado",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31303"
+    },
+    {
+     "fecha": "2026-11-20",
+     "tipo": "Comunicado",
+     "titulo": "CUADRO DE DISTRIBUCION DE PLAZA",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31302"
+    },
+    {
+     "fecha": "2026-11-20",
+     "tipo": "Comunicado",
+     "titulo": "BASES DEL PROCESO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31301"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31302",
+    "archivo": "pdf/2171.pdf",
+    "titulo": "CUADRO DE DISTRIBUCION DE PLAZA"
+   },
+   "revisado_en": "2026-11-20T17:30:23.853Z"
+  },
+  {
+   "id": "2140",
+   "unidad": "INSTITUTO DE MEDICINA LEGAL Y CIENCIAS FORENSES",
+   "distrito": "DIVISION MEDICO LEGAL COBERTURA NACIONAL",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 172 - 2026",
+   "descripcion": "CONVOVATORIA PARA LA CONTRATACION ADMINISTRATIVA DE SERVICIOS DE TRECE (13) PERSONAS PARA EL INSTITUTO DE MEDICINALEGAL Y CIENCIAS FORENSES",
+   "publicacion": "2026-11-19",
+   "inicio": "2026-12-03 08:00",
+   "fin": "2026-12-03 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-19",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXO 01 AL 06- DECLARACION JURADA DEL POSTULANTE",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31286"
+    },
+    {
+     "fecha": "2026-11-19",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "PERFIL DE PUESTOS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31285"
+    },
+    {
+     "fecha": "2026-11-19",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZA",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31284"
+    },
+    {
+     "fecha": "2026-11-19",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31283"
+    },
+    {
+     "fecha": "2026-11-19",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31282"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31284",
+    "archivo": "pdf/2140.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZA"
+   },
+   "revisado_en": "2026-11-19T23:30:25.352Z"
+  },
+  {
+   "id": "2123",
+   "unidad": "INSTITUTO DE MEDICINA LEGAL Y CIENCIAS FORENSES",
+   "distrito": "DIVISION MEDICO LEGAL COBERTURA NACIONAL",
+   "regimen": "DL.728 (Suplencia)",
+   "codigo": "CONCURSO PÚBLICO DE MÉRITOS 728 N° 56 - 2026",
+   "descripcion": "CONVOVATORIA PARA LA CONTRATACION DE UNA (01) PLAZA PARA LA UNIDAD EJECUTORA 010 DEL INSTITUTO DE MEDICINA LEGAL Y CIENCIAS FORENSES DEL D. LEG. N.° 728",
+   "publicacion": "2026-11-18",
+   "inicio": "2026-12-02 08:00",
+   "fin": "2026-12-02 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31243"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31242"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Comunicado",
+     "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZA",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31241"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFIL DE PUESTOS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31239"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Comunicado",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31237"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31241",
+    "archivo": "pdf/2123.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZA"
+   },
+   "revisado_en": "2026-11-19T14:29:14.302Z"
+  },
+  {
+   "id": "2143",
+   "unidad": "INSTITUTO DE MEDICINA LEGAL Y CIENCIAS FORENSES",
+   "distrito": "DIVISION MEDICO LEGAL COBERTURA NACIONAL",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 174 - 2026",
+   "descripcion": "CONVOVATORIA PARA LA CONTRATACION ADMINISTRATIVA DE SERVICIOS DE TRES (03) PERSONAS PARA EL INSTITUTO DE MEDICINALEGAL Y CIENCIAS FORENSES EN MARCO AL PROGRAMA PRESUPUESTAL 1002- PRODUCTOS ESPECÍFICOS PARA REDUCCIÓN DE LA VIOLENCIA CONTRA LA MUJER (VCM)",
+   "publicacion": "2026-11-18",
+   "inicio": "2026-12-02 08:00",
+   "fin": "2026-12-02 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXO 01 AL 06- DECLARACION JURADA DEL POSTULANTE",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31250"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "PERFIL DE PUESTOS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31249"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZA",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31248"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31247"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31246"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31248",
+    "archivo": "pdf/2143.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZA"
+   },
+   "revisado_en": "2026-11-19T14:29:56.083Z"
+  },
+  {
+   "id": "2157",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "DISTRITO FISCAL DE CAÑETE",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 195 - 2026",
+   "descripcion": "PROCESO DE SELECCIÓN DE PERSONAL CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE CINCO (05) PERSONAS PARA EL DISTRITO FISCAL DE CAÑETE",
+   "publicacion": "2026-11-18",
+   "inicio": "2026-12-02 08:00",
+   "fin": "2026-12-02 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXO 01 AL 06- DECLARACION JURADA DEL POSTULANTE",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31236"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFILES DE PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31235"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31234"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31233"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31231"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31234",
+    "archivo": "pdf/2157.pdf",
+    "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS"
+   },
+   "revisado_en": "2026-11-19T14:31:01.762Z"
+  },
+  {
+   "id": "2164",
+   "unidad": "GERENCIA ADMINISTRATIVA DE AREQUIPA",
+   "distrito": "DISTRITO FISCAL DE AREQUIPA",
+   "regimen": "DL.728 (Suplencia)",
+   "codigo": "CONCURSO PÚBLICO DE MÉRITOS 728 N° 64 - 2026",
+   "descripcion": "CONTRATAR 01 SUPLENCIA",
+   "publicacion": "2026-11-18",
+   "inicio": "2026-12-02 08:00",
+   "fin": "2026-12-02 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXO 01- DEL POSTULANTE",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31222"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31221"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31220"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFIL",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31219"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "BASES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31218"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31221",
+    "archivo": "pdf/2164.pdf",
+    "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS"
+   },
+   "revisado_en": "2026-11-18T21:30:23.687Z"
+  },
+  {
+   "id": "2165",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "DISTRITO FISCAL DE HUAURA",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 191 - 2026",
+   "descripcion": "CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE DOS (02) PERSONAS PARA EL DISTRITO FISCAL DE HUAURA",
+   "publicacion": "2026-11-18",
+   "inicio": "2026-12-02 08:00",
+   "fin": "2026-12-02 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31262"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFILES DE PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31261"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Comunicado",
+     "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS VACANTES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31260"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Comunicado",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31259"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXOS DEL 01 AL 06",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31258"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31260",
+    "archivo": "pdf/2165.pdf",
+    "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS VACANTES"
+   },
+   "revisado_en": "2026-11-19T14:31:49.329Z"
+  },
+  {
+   "id": "2166",
+   "unidad": "GERENCIA ADMINISTRATIVA DE AREQUIPA",
+   "distrito": "DISTRITO FISCAL DE AREQUIPA",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 193 - 2026",
+   "descripcion": "CONTRATAR 01 SUPLENCIA",
+   "publicacion": "2026-11-18",
+   "inicio": "2026-12-02 08:00",
+   "fin": "2026-12-02 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXOS 01 AL 06",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31213"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31212"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31211"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFIL",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31210"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "BASES CAS 0193-2026",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31209"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31212",
+    "archivo": "pdf/2166.pdf",
+    "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS"
+   },
+   "revisado_en": "2026-11-18T21:31:05.125Z"
+  },
+  {
+   "id": "2167",
+   "unidad": "INSTITUTO DE MEDICINA LEGAL Y CIENCIAS FORENSES",
+   "distrito": "DIVISION MEDICO LEGAL COBERTURA NACIONAL",
+   "regimen": "DL. 276 (Plazo indeterminado)",
+   "codigo": "CONCURSO PÚBLICO DE MÉRITOS 276 N° 15 - 2026",
+   "descripcion": "CONVOVATORIA PARA LA CONTRATACION DE NUEVE (09) PLAZAS PARA LA UNIDAD EJECUTORA 010 DEL INSTITUTO DE MEDICINA LEGAL Y CIENCIAS FORENSES DE LOS D. LEG. N.° 276 Y N.° 728",
+   "publicacion": "2026-11-18",
+   "inicio": "2026-12-02 08:00",
+   "fin": "2026-12-02 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXOS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31201"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31200"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Comunicado",
+     "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31199"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFIL DE PUESTOS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31198"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Comunicado",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31197"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31199",
+    "archivo": "pdf/2167.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS"
+   },
+   "revisado_en": "2026-11-18T21:31:46.413Z"
+  },
+  {
+   "id": "2168",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "DISTRITO FISCAL DE LIMA ESTE",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 194 - 2026",
+   "descripcion": "CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE VEINTISIETE (27) PERSONAS PARA EL DISTRITO FISCAL DE LIMA ESTE PLAZO &quot;DETERMINADO Y SUPLENCIA&quot;",
+   "publicacion": "2026-11-18",
+   "inicio": "2026-12-02 08:00",
+   "fin": "2026-12-02 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Comunicado",
+     "titulo": "PERFILES DE PUESTO PLAZAS SUPLENCIAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31229"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Comunicado",
+     "titulo": "PERFILES DE PUESTO PLAZAS DETERMINADOS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31228"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXOS DEL 01 AL 06",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31217"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Comunicado",
+     "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS VACANTES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31216"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Comunicado",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31215"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Comunicado",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31214"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31216",
+    "archivo": "pdf/2168.pdf",
+    "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS VACANTES"
+   },
+   "revisado_en": "2026-11-18T21:32:27.982Z"
+  },
+  {
+   "id": "2033",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "DISTRITO FISCAL DE HUANUCO",
+   "regimen": "DL.728 (Plazo indeterminado)",
+   "codigo": "CONCURSO PÚBLICO DE MÉRITOS 728 N° 47 - 2026",
+   "descripcion": "CONTRATACIÓN DE PERSONAL BAJO EL RÉGIMEN LABORAL DEL DECRETO LEGISLATIVO N° 728 DE QUINCE (15) PLAZAS PARA EL DISTRITO FISCAL HUÁNUCO",
+   "publicacion": "2026-11-18",
+   "inicio": "2026-12-02 08:00",
+   "fin": "2026-12-02 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFIL DEL PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31196"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31195"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Comunicado",
+     "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31194"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31193"
+    },
+    {
+     "fecha": "2026-11-18",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXO 01",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31192"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31194",
+    "archivo": "pdf/2033.pdf",
+    "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS"
+   },
+   "revisado_en": "2026-11-19T14:32:47.851Z"
+  },
+  {
+   "id": "2152",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "COBERTURA NACIONAL",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 182 - 2026",
+   "descripcion": "CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE TRECE (13) PERSONAS PARA COBERTURA NACIONAL",
+   "publicacion": "2026-11-17",
+   "inicio": "2026-12-01 08:00",
+   "fin": "2026-12-01 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-17",
+     "tipo": "Comunicado",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31176"
+    },
+    {
+     "fecha": "2026-11-17",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFILES DE PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31175"
+    },
+    {
+     "fecha": "2026-11-17",
+     "tipo": "Comunicado",
+     "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS VACANTES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31174"
+    },
+    {
+     "fecha": "2026-11-17",
+     "tipo": "Comunicado",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31173"
+    },
+    {
+     "fecha": "2026-11-17",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXOS DEL 01 AL 06",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31170"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31174",
+    "archivo": "pdf/2152.pdf",
+    "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS VACANTES"
+   },
+   "revisado_en": "2026-11-18T18:09:39.287Z"
+  },
+  {
+   "id": "2161",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "DISTRITO FISCAL DE TUMBES",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 190 - 2026",
+   "descripcion": "CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE DOS (02) PERSONAS PARA EL DISTRITO FISCAL DE TUMBES",
+   "publicacion": "2026-11-17",
+   "inicio": "2026-12-01 00:00",
+   "fin": "2026-12-02 23:59",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-16",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31112"
+    },
+    {
+     "fecha": "2026-11-16",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFILES DE PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31111"
+    },
+    {
+     "fecha": "2026-11-16",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS VACANTES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31110"
+    },
+    {
+     "fecha": "2026-11-16",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31109"
+    },
+    {
+     "fecha": "2026-11-16",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXOS DEL 01 AL 06",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31108"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31110",
+    "archivo": "pdf/2161.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS VACANTES"
+   },
+   "revisado_en": "2026-11-17T22:03:17.702Z"
+  },
+  {
+   "id": "2162",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "DISTRITO FISCAL DE SULLANA",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 192 - 2026",
+   "descripcion": "PROCESO CAS N° 192-2026-MP-FN-DF SULLANA (PLAZO DETERMINADO (NECESIDAD TRANSITORIA) Y SUPLENCIAS PARA LA CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE TRES (03) PERSONAS",
+   "publicacion": "2026-11-17",
+   "inicio": "2026-12-01 08:00",
+   "fin": "2026-12-01 18:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-17",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXOS 01 AL 06",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31156"
+    },
+    {
+     "fecha": "2026-11-17",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31155"
+    },
+    {
+     "fecha": "2026-11-17",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31154"
+    },
+    {
+     "fecha": "2026-11-17",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFILES DE PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31153"
+    },
+    {
+     "fecha": "2026-11-17",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "BASES DEL PROCESO DE SELECCIÓN CAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31152"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31155",
+    "archivo": "pdf/2162.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS"
+   },
+   "revisado_en": "2026-11-17T22:04:00.333Z"
+  },
+  {
+   "id": "2156",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "DISTRITO FISCAL DE LA SELVA CENTRAL",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 189 - 2026",
+   "descripcion": "CONTRATACION ADMINISTRATIVA DE SERVICIOS DE DOS (02) PERSONAS PARA EL DISTRITO FISCAL DE SELVA CENTRAL",
+   "publicacion": "2026-11-16",
+   "inicio": "2026-11-30 08:00",
+   "fin": "2026-11-30 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-16",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXOS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31125"
+    },
+    {
+     "fecha": "2026-11-16",
+     "tipo": "Comunicado",
+     "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31124"
+    },
+    {
+     "fecha": "2026-11-16",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "BASES DEL PROCESO DE SELECCION",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31123"
+    },
+    {
+     "fecha": "2026-11-16",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31122"
+    },
+    {
+     "fecha": "2026-11-16",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFILES DE PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31121"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31124",
+    "archivo": "pdf/2156.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS"
+   },
+   "revisado_en": "2026-11-16T23:30:23.858Z"
+  },
+  {
+   "id": "2147",
+   "unidad": "GERENCIA ADMINISTRATIVA DE AREQUIPA",
+   "distrito": "DISTRITO FISCAL DE AREQUIPA",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 186 - 2026",
+   "descripcion": "CONTRATAR 05 PLAZAS CAS - TRANSITORIO Y SUPLENCIAS",
+   "publicacion": "2026-11-13",
+   "inicio": "2026-11-27 08:00",
+   "fin": "2026-11-27 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-13",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXOS 01 AL 06",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31077"
+    },
+    {
+     "fecha": "2026-11-13",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31076"
+    },
+    {
+     "fecha": "2026-11-13",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31075"
+    },
+    {
+     "fecha": "2026-11-13",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFILES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31074"
+    },
+    {
+     "fecha": "2026-11-13",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "BASES DEL PROCESO CAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31073"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31076",
+    "archivo": "pdf/2147.pdf",
+    "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS"
+   },
+   "revisado_en": "2026-11-13T19:30:23.601Z"
+  },
+  {
+   "id": "2154",
+   "unidad": "GERENCIA ADMINISTRATIVA DE AREQUIPA",
+   "distrito": "DISTRITO FISCAL DE AREQUIPA",
+   "regimen": "DL.728 (Suplencia)",
+   "codigo": "CONCURSO PÚBLICO DE MÉRITOS 728 N° 62 - 2026",
+   "descripcion": "CONTRATAR 01 SUPLENCIA",
+   "publicacion": "2026-11-13",
+   "inicio": "2026-11-27 08:00",
+   "fin": "2026-11-27 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-13",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXO N° 01 D.J. DEL POSTULANTE",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31082"
+    },
+    {
+     "fecha": "2026-11-13",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31081"
+    },
+    {
+     "fecha": "2026-11-13",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31080"
+    },
+    {
+     "fecha": "2026-11-13",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFIL",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31079"
+    },
+    {
+     "fecha": "2026-11-13",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "BASES DE CRONOGRAMA",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31078"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31081",
+    "archivo": "pdf/2154.pdf",
+    "titulo": "CUADRO DE DISTRIBUCION DE PLAZAS"
+   },
+   "revisado_en": "2026-11-13T19:31:04.801Z"
+  },
+  {
+   "id": "2159",
+   "unidad": "GERENCIA GENERAL",
+   "distrito": "DISTRITO FISCAL DE HUANCAVELICA",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 187 - 2026",
+   "descripcion": "CONTRATACION ADMINISTRATIVA DE SERVICIOS DE UN (01) PUESTO PARA EL DF HUANCAVELICA",
+   "publicacion": "2026-11-13",
+   "inicio": "2026-11-27 08:00",
+   "fin": "2026-11-27 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-13",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXOS DEL 1 AL 6",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31089"
+    },
+    {
+     "fecha": "2026-11-13",
+     "tipo": "Comunicado",
+     "titulo": "PERFIL DE PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31088"
+    },
+    {
+     "fecha": "2026-11-13",
+     "tipo": "Comunicado",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31087"
+    },
+    {
+     "fecha": "2026-11-13",
+     "tipo": "Comunicado",
+     "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31086"
+    },
+    {
+     "fecha": "2026-11-13",
+     "tipo": "Comunicado",
+     "titulo": "BASES DEL PROCESO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31085"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31086",
+    "archivo": "pdf/2159.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS"
+   },
+   "revisado_en": "2026-11-13T19:31:46.359Z"
+  },
+  {
+   "id": "2110",
+   "unidad": "GERENCIA ADMINISTRATIVA DE LAMBAYEQUE",
+   "distrito": "DISTRITO FISCAL DE LAMBAYEQUE",
+   "regimen": "DL.728 (Plazo indeterminado)",
+   "codigo": "CONCURSO PÚBLICO DE MÉRITOS 728 N° 58 - 2026",
+   "descripcion": "PROCESO DE SELECCIÓN DE PERSONAL BAJO LOS ALCANCES DEL RÉGIMEN DEL DECRETO LEGISLATIVO N° 728 PARA CUBRIR DIECISÉIS (16) PLAZAS DEL DISTRITO FISCAL DE LAMBAYEQUE.",
+   "publicacion": "2026-11-12",
+   "inicio": "2026-11-27 08:00",
+   "fin": "2026-11-27 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "PERFIL DEL PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31060"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31059"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXO 01 - DD.JJ.",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31028"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31026"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "BASES DEL CONCURSO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31025"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31059",
+    "archivo": "pdf/2110.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS"
+   },
+   "revisado_en": "2026-11-12T23:30:23.689Z"
+  },
+  {
+   "id": "2115",
+   "unidad": "GERENCIA ADMINISTRATIVA DE LAMBAYEQUE",
+   "distrito": "DISTRITO FISCAL DE LAMBAYEQUE",
+   "regimen": "DL.728 (Suplencia)",
+   "codigo": "CONCURSO PÚBLICO DE MÉRITOS 728 N° 61 - 2026",
+   "descripcion": "PROCESO DE SELECCIÓN DE PERSONAL BAJO LOS ALCANCES DEL RÉGIMEN DEL DECRETO LEGISLATIVO N°728 POR LA MODALIDAD DE SUPLENCIA PARA CUBRIR SEIS (06) PLAZAS DEL DISTRITO FISCAL DE LAMBAYEQUE.",
+   "publicacion": "2026-11-12",
+   "inicio": "2026-11-27 08:00",
+   "fin": "2026-11-27 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-27",
+     "tipo": "Comunicado",
+     "titulo": "Comunicado 01",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31501"
+    },
+    {
+     "fecha": "2026-11-16",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31104"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "BASES DEL CONCURSO PÚBLICO DE MÉRITOS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31064"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "DECLARACION JURADA",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31018"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFIL DEL PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31016"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31015"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31104",
+    "archivo": "pdf/2115.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS"
+   },
+   "revisado_en": "2026-11-27T23:30:24.047Z"
+  },
+  {
+   "id": "2116",
+   "unidad": "GERENCIA ADMINISTRATIVA DE LAMBAYEQUE",
+   "distrito": "DISTRITO FISCAL DE LAMBAYEQUE",
+   "regimen": "CAS",
+   "codigo": "CONVOCATORIA CAS N° 184 - 2026",
+   "descripcion": "CONTRATACIÓN ADMINISTRATIVA DE SERVICIOS DE SIETE (07) PERSONAS BAJO EL REGIMEN LABORAL DEL DECRETO LEGISLATIVO N°1057 PARA EL DISTRITO FISCAL DE LAMBAYEQUE",
+   "publicacion": "2026-11-12",
+   "inicio": "2026-11-27 08:00",
+   "fin": "2026-11-27 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "DECLARACIÓN JURADA - ANEXOS DEL 1 AL 6",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31013"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31012"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFIL DEL PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31011"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31010"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "BASES DE LA CONVOCATORIA",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31009"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31012",
+    "archivo": "pdf/2116.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS"
+   },
+   "revisado_en": "2026-11-27T15:30:23.528Z"
+  },
+  {
+   "id": "2135",
+   "unidad": "GERENCIA ADMINISTRATIVA DE LAMBAYEQUE",
+   "distrito": "DISTRITO FISCAL DE LAMBAYEQUE",
+   "regimen": "DL. 276 (Plazo indeterminado)",
+   "codigo": "CONCURSO PÚBLICO DE MÉRITOS 276 N° 14 - 2026",
+   "descripcion": "PROCESO DE SELECCIÓN DE PERSONAL BAJO LOS ALCANCES DEL RÉGIMEN DEL DECRETO LEGISLATIVO N° 276 PARA CUBRIR DOS (02) PLAZAS DEL DISTRITO FISCAL DE LAMBAYEQUE.",
+   "publicacion": "2026-11-12",
+   "inicio": "2026-11-27 08:00",
+   "fin": "2026-11-27 16:00",
+   "estado": "Vigente",
+   "anexos": [
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Anexos del 1 al 6",
+     "titulo": "ANEXO 01 - DD.JJ.",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31023"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31022"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Cronograma de Actividades",
+     "titulo": "CRONOGRAMA DE ACTIVIDADES",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31021"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Consideraciones Importantes",
+     "titulo": "BASES DEL PROCESO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31020"
+    },
+    {
+     "fecha": "2026-11-12",
+     "tipo": "Perfil Referencial y Requisitos",
+     "titulo": "PERFIL DEL PUESTO",
+     "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31019"
+    }
+   ],
+   "cuadro": {
+    "url": "https://archivos.mpfn.gob.pe/convoca/anexo-archivo/i/31022",
+    "archivo": "pdf/2135.pdf",
+    "titulo": "CUADRO DE DISTRIBUCIÓN DE PLAZAS"
+   },
+   "revisado_en": "2026-11-12T19:31:46.712Z"
+  }
+ ]
+}
