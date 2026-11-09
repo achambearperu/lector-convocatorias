@@ -15,6 +15,7 @@ Cada hora:
 - Se identifica con un nombre honesto (`AChambearPeruBot`) que incluye web y correo de contacto.
 - Visita una página a la vez, con 4 segundos de pausa entre cada una.
 - Si gob.pe responde 403 o 429, se detiene al instante. Si falla varias veces, también.
+- Ante un error del servidor (5xx) o una falla de conexión, espera 30 segundos y reintenta esa página una sola vez.
 - Respeta su `robots.txt` y no usa la paginación `?sheet=` que este prohíbe.
 
 ## Seguridad

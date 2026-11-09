@@ -42,6 +42,7 @@ const RECORDAR_DIAS = 120; // y el id se recuerda 120 días para no volver a lee
 const tieneCronograma = (t) => /cronograma[\s\S]{0,3000}?(?:\d{1,2}[\/.-]\d{1,2}[\/.-]20\d{2}|\d{1,2}\s+de\s+(?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|setiembre|septiembre|octubre|noviembre|diciembre))/i.test(t ?? "");
 const MAX_COMPLETAR = Number(process.env.LECTOR_MAX_CRONOGRAMAS ?? 25); // cronogramas aparte por vuelta, de lecturas ya guardadas
 const MAX_INTENTOS = 3; // un PDF que no baja en 3 vueltas se guarda sin texto
+const MAX_VUELTAS_DETENIDAS = 3; // vueltas seguidas detenidas por gob.pe antes de marcar en rojo
 
 // Avisos que ya cerraron: se guarda la página pero no se bajan sus PDF
 // (ahorra tiempo y visitas a gob.pe). Cerrado = ya publicó resultados
@@ -75,6 +76,7 @@ let completados = 0;
 let ocrUsados = 0;
 let quedan = 0;
 let detenido = null;
+let fallaDeServidor = false; // se detuvo por 5xx/conexión (no por 403/429 ni por un error de código)
 
 try {
   // Primero las colecciones que hace más tiempo no se revisan (las nuevas, sin fecha, van primero).
@@ -212,6 +214,7 @@ try {
   }
 } catch (e) {
   detenido = e instanceof Detenido ? e.message : `error inesperado: ${e.stack ?? e.message}`;
+  fallaDeServidor = e instanceof Detenido && !e.frenado;
   console.error(`DETENIDO: ${detenido}`);
 }
 
@@ -223,16 +226,21 @@ indice.lecturas = indice.lecturas.filter((l) => diasDesde(l.leido_en) <= GUARDAR
 for (const [id, fecha] of Object.entries(estado.leidos)) if (diasDesde(fecha) > RECORDAR_DIAS) delete estado.leidos[id];
 for (const id of Object.keys(estado.cronograma_revisado)) if (!indice.lecturas.some((l) => String(l.id) === id)) delete estado.cronograma_revisado[id];
 indice.actualizado = new Date().toISOString();
+if (fallaDeServidor) estado.vueltas_detenidas = (estado.vueltas_detenidas ?? 0) + 1;
+else if (!detenido) estado.vueltas_detenidas = 0;
 
 writeFileSync(join(DATOS, "indice.json"), JSON.stringify(indice, null, 1));
 writeFileSync(join(DATOS, "estado.json"), JSON.stringify(estado, null, 1));
 
+// Una falla pasajera de gob.pe no marca la vuelta en rojo, salvo que se repita 3 vueltas seguidas.
+const pasajera = fallaDeServidor && estado.vueltas_detenidas < MAX_VUELTAS_DETENIDAS;
 const resumen = [
   `Vuelta ${indice.actualizado.slice(0, 16).replace("T", " ")} UTC · leídos: ${leidos} · con OCR: ${ocrUsados} · cronogramas aparte: ${completados}` + (quedan ? ` · quedan ${quedan} para la próxima` : ""),
   `Lecturas guardadas: ${indice.lecturas.length} · colecciones conocidas: ${estado.colecciones.length} · entidades conocidas: ${Object.keys(estado.instituciones).length}`,
   detenido ? `El lector se detuvo: ${detenido}` : "",
+  pasajera ? `::warning::gob.pe respondió con errores del servidor; se reintenta en la próxima vuelta (vueltas seguidas detenidas: ${estado.vueltas_detenidas})` : "",
   paginasSaltadas.length ? `Páginas saltadas:\n${paginasSaltadas.map((p) => `- ${p}`).join("\n")}` : "",
 ].filter(Boolean).join("\n");
 console.log(`\n${resumen}`);
 if (process.env.GITHUB_STEP_SUMMARY) writeFileSync(process.env.GITHUB_STEP_SUMMARY, resumen + "\n", { flag: "a" });
-if (detenido) process.exitCode = 1;
+if (detenido && !pasajera) process.exitCode = 1;

@@ -5,7 +5,8 @@
 // Reglas para no molestar ni ser bloqueados:
 //  · Nombre honesto del bot, con web y correo.
 //  · Una visita a la vez, con pausa de 4 segundos.
-//  · Si la web responde con error (403, 429, 5xx), el bot se detiene.
+//  · Si la web responde 403 o 429, el bot se detiene. Un 5xx o una falla de
+//    conexión se reintenta una sola vez; si se repiten seguidas, también se detiene.
 //  · robots.txt de gob.pe: solo prohíbe /admin/ y ?sheet= (no los usamos).
 // ─────────────────────────────────────────────────────────────
 
@@ -18,15 +19,25 @@ const BOT = "AChambearPeruBot/0.1 (+https://achambearperu.com; achambearperu@gma
 const PAUSA_MS = Number(process.env.BOT_PAUSA_MS ?? 4000);
 const BASE = "https://www.gob.pe";
 
-export class Detenido extends Error {}
+// frenado = true: gob.pe nos frenó (403/429). false: fallas de su servidor (5xx/conexión).
+export class Detenido extends Error {
+  constructor(mensaje, { frenado = false } = {}) {
+    super(mensaje);
+    this.frenado = frenado;
+  }
+}
 
 const esperar = (ms) => new Promise((r) => setTimeout(r, ms));
 let ultimaVisita = 0;
 
-// Fallas sueltas del servidor (502, 503, sin conexión) en una página:
-// se salta esa página. Si se repiten seguidas, gob.pe está con problemas y el bot
-// se detiene. Un 403 o 429 (nos están frenando) detiene el bot al tiro.
+// Fallas sueltas del servidor (502, 503, sin conexión) en una página: se espera
+// 30 s y se reintenta una vez; si vuelve a fallar se salta esa página. Si se repiten
+// seguidas, gob.pe está con problemas y el bot se detiene. Un 403 o 429 (nos están
+// frenando) detiene el bot al tiro y no se reintenta.
 const MAX_FALLAS = 3;
+const ESPERA_REINTENTO_MS = 30000;
+const MAX_PDF_BYTES = 30 * 1024 * 1024;
+const PDF_GRANDE = Symbol("pdf-grande");
 let fallas = 0;
 export const paginasSaltadas = [];
 
@@ -37,7 +48,8 @@ function fallaSuelta(url, motivo) {
   return null;
 }
 
-async function visitar(url, tipo = "texto") {
+// Una visita: devuelve { valor } o, si conviene reintentar, { falla: motivo }.
+async function intentar(url, tipo) {
   const falta = ultimaVisita + PAUSA_MS - Date.now();
   if (falta > 0) await esperar(falta);
   ultimaVisita = Date.now();
@@ -45,15 +57,39 @@ async function visitar(url, tipo = "texto") {
   try {
     r = await fetch(url, { headers: { "User-Agent": BOT }, signal: AbortSignal.timeout(40000) });
   } catch (e) {
-    return fallaSuelta(url, `sin conexión (${e.message})`);
+    return { falla: `sin conexión (${e.message})` };
   }
   if (r.status === 403 || r.status === 429) {
-    throw new Detenido(`gob.pe respondió ${r.status} en ${url}: nos está frenando, el bot se detiene`);
+    throw new Detenido(`gob.pe respondió ${r.status} en ${url}: nos está frenando, el bot se detiene`, { frenado: true });
   }
-  if (r.status >= 500) return fallaSuelta(url, `error ${r.status} del servidor`);
-  if (!r.ok) return null; // 404 u otro: se salta solo esa página
-  fallas = 0; // solo detienen las fallas seguidas (en una vuelta larga, una suelta no importa)
-  return tipo === "pdf" ? Buffer.from(await r.arrayBuffer()) : r.text();
+  if (r.status >= 500) return { falla: `error ${r.status} del servidor` };
+  if (!r.ok) return { valor: null }; // 404 u otro: se salta solo esa página
+  try {
+    let valor;
+    if (tipo !== "pdf") valor = await r.text();
+    else if (Number(r.headers.get("content-length")) > MAX_PDF_BYTES) {
+      await r.body?.cancel(); // no se descarga
+      valor = PDF_GRANDE;
+    } else {
+      const datos = Buffer.from(await r.arrayBuffer());
+      valor = datos.length > MAX_PDF_BYTES ? PDF_GRANDE : datos;
+    }
+    fallas = 0; // solo detienen las fallas seguidas (en una vuelta larga, una suelta no importa)
+    return { valor };
+  } catch (e) {
+    return { falla: `sin conexión (${e.message})` }; // se cortó a media descarga
+  }
+}
+
+async function visitar(url, tipo = "texto") {
+  const inicio = Date.now();
+  let resultado = await intentar(url, tipo);
+  if (resultado.falla) {
+    await esperar(ESPERA_REINTENTO_MS);
+    resultado = await intentar(url, tipo);
+    if (resultado.falla) return fallaSuelta(url, `${resultado.falla} tras ${Math.round((Date.now() - inicio) / 1000)} s (2 intentos)`);
+  }
+  return resultado.valor;
 }
 
 // ─── 1. Buscador: avisos y compendios de todas las entidades ───
@@ -239,18 +275,22 @@ const tieneTexto = (t) => (t ?? "").replace(/\s/g, "").length >= 200;
 export async function leerPdf(url, conOcr = true) {
   const datos = await visitar(url, "pdf");
   if (!datos) return null;
+  if (datos === PDF_GRANDE) {
+    paginasSaltadas.push(`PDF de más de 30 MB · ${url}`);
+    return { texto: null, ocr: false };
+  }
   const carpeta = mkdtempSync(join(tmpdir(), "bases-"));
   try {
     const archivo = join(carpeta, "bases.pdf");
     writeFileSync(archivo, datos);
     // pdftotext (paquete poppler-utils). Sin -layout: deja cada
     // etiqueta seguida de su valor, que es lo que lee el traductor.
-    const texto = execFileSync("pdftotext", ["-enc", "UTF-8", archivo, "-"], { maxBuffer: 20 * 1024 * 1024 }).toString("utf8");
+    const texto = execFileSync("pdftotext", ["-enc", "UTF-8", archivo, "-"], { maxBuffer: 20 * 1024 * 1024, timeout: 60000 }).toString("utf8");
     // Con -layout cada fila de una tabla queda en una línea: sirve de respaldo
     // para los cronogramas en tabla (UGEL y otros), donde sin -layout las
     // fechas quedan todas juntas, lejos de su etapa.
     let layout = null;
-    try { layout = execFileSync("pdftotext", ["-enc", "UTF-8", "-layout", archivo, "-"], { maxBuffer: 20 * 1024 * 1024 }).toString("utf8"); } catch {}
+    try { layout = execFileSync("pdftotext", ["-enc", "UTF-8", "-layout", archivo, "-"], { maxBuffer: 20 * 1024 * 1024, timeout: 60000 }).toString("utf8"); } catch {}
     if (tieneTexto(texto)) return { texto, layout, ocr: false };
     if (!conOcr) return { texto: null, ocr: false, pendienteOcr: true };
     const ocr = leerConOcr(archivo, carpeta);
